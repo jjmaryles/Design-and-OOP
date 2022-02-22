@@ -1,4 +1,21 @@
 package Ex1;
 
-public class OliveTree {
+
+public class OliveTree extends Tree {
+	
+	
+	OliveTree(int height, Season season) {
+		// TODO: Implement.
+		super(0,null,null);
+	}
+	
+	@Override
+	public String toString() {
+		// TODO: Implement.
+		return null;
+	}
+	@Override
+	public void changeSeason() {
+		// TODO: Implement.
+	}
 }
