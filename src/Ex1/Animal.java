@@ -19,7 +19,36 @@ public abstract class Animal implements Seasonable,Comparable{
 	
 	@Override
 	public int compareTo(Object o) {
-		// TODO: Implement.
-		return 0;
+		Animal other = (Animal)o;
+		return this.weight- other.weight;
+	}
+
+	@Override
+	public void changeSeason() {
+		switch (this.season) {
+			case FALL -> {
+				this.season = Season.WINTER;
+				break;
+			}
+			case WINTER -> {
+				this.season = Season.SPRING;
+				break;
+			}
+			case SPRING -> {
+				this.season = Season.SUMMER;
+				break;
+			}
+			case SUMMER -> {
+				this.season = Season.FALL;
+				break;
+			}
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Animal: " +
+				"My weight is: " + weight +
+				" and my color is: " + color;
 	}
 }
