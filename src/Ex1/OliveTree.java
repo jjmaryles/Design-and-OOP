@@ -3,19 +3,46 @@ package Ex1;
 
 public class OliveTree extends Tree {
 	
+	boolean hasFruit;
 	
 	OliveTree(int height, Season season) {
-		// TODO: Implement.
 		super(0,null,null);
+		
+		hasFruit = false;
+		if(season==Season.FALL)
+			hasFruit = true;
 	}
 	
 	@Override
 	public String toString() {
-		// TODO: Implement.
-		return null;
+		String res = "Olive tree. I give fruit. "+super.toString();
+		
+		return res;
 	}
 	@Override
 	public void changeSeason() {
-		// TODO: Implement.
+		super.changeSeason();
+		
+		hasFruit = false;
+		switch (season){
+			case WINTER -> {
+				this.height+=5;
+				break;
+			}
+			
+			case SUMMER, SPRING -> {
+				this.height+=10;
+				break;
+			}
+			
+			case FALL -> {
+				hasFruit = true;
+				this.height += 5;
+				break;
+			}
+			
+			
+			
+		}
 	}
 }
