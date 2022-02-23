@@ -2,7 +2,7 @@ package Ex1;
 
 public abstract class Animal implements Seasonable,Comparable{
 	protected int weight;
-	private Season season;
+	protected Season season;
 	protected Color color;
 	
 	Animal(int weight, Season season, Color color){
