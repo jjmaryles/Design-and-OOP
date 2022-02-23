@@ -71,7 +71,7 @@ public class FigTree extends Tree {
 			case FALL:
 				leavesColor = Color.YELLOW;
 				this.height += 20;
-				break;
+				 break;
 			
 			
 		}
