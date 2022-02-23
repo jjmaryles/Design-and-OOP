@@ -19,19 +19,19 @@ public class Bear extends Animal {
 	public void changeSeason() {
 		super.changeSeason();
 		switch (this.season) {
-			case FALL -> {
+			case FALL:
 				this.weight *= 1.25;
 				break;
-			}
-			case WINTER -> {
+
+			case WINTER:
 				this.weight *= 0.8;
 				break;
-			}
-			case SPRING -> {
+
+			case SPRING:
 				this.weight *= 0.75;
 				break;
-			}
-			case SUMMER -> {
+
+			case SUMMER:
 				this.weight *= 1.33;
 				break;
 			}

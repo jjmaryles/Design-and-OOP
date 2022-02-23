@@ -32,7 +32,7 @@ public class OliveTree extends Tree {
 				break;
 			
 			
-			case SUMMER, SPRING:
+			case SUMMER: case SPRING:
 				this.height += 10;
 				break;
 			

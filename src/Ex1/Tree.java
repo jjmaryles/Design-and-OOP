@@ -29,23 +29,21 @@ public abstract class Tree implements Comparable, Seasonable {
 	@Override
 	public void changeSeason() {
 		switch (season){
-			case FALL -> {
+			case FALL:
 				season= Season.WINTER;
 				break;
-			}
 			
-			case SPRING -> {season=Season.SUMMER;
-			break;
-			}
+			case SPRING:
+				season=Season.SUMMER;
+				break;
 			
-			case SUMMER -> {season = Season.FALL;
-			break;
-			}
+			case SUMMER:
+				season = Season.FALL;
+				break;
 			
-			case WINTER -> {
+			case WINTER:
 				season = Season.SPRING;
 				break;
-			}
 			
 		}
 		
