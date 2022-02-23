@@ -10,7 +10,14 @@ public class SeasonUtil {
 	}
 	
 	static String reportAll(Seasonable[] seasonables) {
-		// TODO: Implement.
-		return null;
+		
+		String res = "";
+		
+		for (Seasonable s : seasonables)
+		{
+			res += s.toString()+"\n";
+		}
+		
+		return res;
 	}
 }

@@ -6,7 +6,7 @@ public class OliveTree extends Tree {
 	boolean hasFruit;
 	
 	OliveTree(int height, Season season) {
-		super(0,null,null);
+		super(height,season,Color.GREEN);
 		
 		hasFruit = false;
 		if(season==Season.FALL)

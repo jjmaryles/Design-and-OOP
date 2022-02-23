@@ -7,10 +7,15 @@ public class FigTree extends Tree {
 	boolean hasFruit;
 	
 	FigTree(int height, Season season) {
-		super(0,null,null);
+		super(height,season,null);
+		
+		if(Season.FALL== season)
+			leavesColor = Color.YELLOW;
+		else
+			leavesColor = Color.GREEN;
 		
 		hasLeaves = true;
-		if(season==Season.FALL)
+		if(season==Season.WINTER)
 			hasLeaves = false;
 		
 		hasFruit = false;
@@ -25,10 +30,13 @@ public class FigTree extends Tree {
 		if(hasFruit)
 			res += "I give fruit. ";
 		
-		res += "My weight is: " + height;
+		res += "My height is: " + height;
 		
 		if(!hasLeaves)
-			res += "and I have no leaves";
+			res += " and I have no leaves";
+		
+		else
+			res+= " and my color is: " +leavesColor.toString();
 		
 		return res;
 	}
@@ -38,6 +46,7 @@ public class FigTree extends Tree {
 		
 		super.changeSeason();
 		
+		hasLeaves = true;
 		hasFruit = false;
 		switch (season){
 			case WINTER -> {
@@ -47,19 +56,20 @@ public class FigTree extends Tree {
 			}
 			
 			case SUMMER -> {
-				this.height+=10;
+				this.height+=30;
 				this.hasFruit = true;
 				break;
 			}
 			
 			case SPRING -> {
-				this.height+=10;
+				this.height+=30;
 				leavesColor = Color.GREEN;
 				break;
 			}
 			
 			case FALL -> {
 				leavesColor = Color.YELLOW;
+				this.height +=20;
 				break;
 			}
 			
