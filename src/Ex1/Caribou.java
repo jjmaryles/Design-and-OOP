@@ -11,7 +11,7 @@ public class Caribou extends Animal {
 	
 	@Override
 	public String toString() {
-		String s = "Caribou. ";
+		String s = "Caribou: ";
 		if(this.season == Season.WINTER)
 			s += "I am migrating south. ";
 

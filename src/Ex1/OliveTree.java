@@ -15,7 +15,12 @@ public class OliveTree extends Tree {
 	
 	@Override
 	public String toString() {
-		String res = "Olive tree. I give fruit. " + super.toString();
+		String res = "Olive tree. ";
+		
+		if(hasFruit)
+			res+="I give fruit. " ;
+		
+		res+= super.toString();
 		
 		return res;
 	}
