@@ -33,7 +33,7 @@ public class Bear extends Animal {
 			case SPRING:
 				this.weight *= 3.0 /4;
 				break;
-			
+			 
 			case SUMMER:
 				this.weight *= 4.0 /3;
 				break;
