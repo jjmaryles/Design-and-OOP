@@ -14,7 +14,6 @@ public class Order {
 	private Date orderDate;
 	private Date deliveryDate;
 	private OrderStatus status;
-	
 	private long customrId;
 	
 	public Order(String orderInfo)  {
@@ -30,7 +29,7 @@ public class Order {
 		catch (ParseException e) { }
 		
 		status = OrderStatus.valueOf(order[9]);
-		
+		customrId = Long.parseLong(order[12]);
 		
 		//ToDo
 	}

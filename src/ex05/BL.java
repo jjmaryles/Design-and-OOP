@@ -2,6 +2,7 @@ package ex05;
 
 
 
+import javax.xml.crypto.Data;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -21,8 +22,8 @@ public class BL implements IBL {
 	
 	@Override
 	public Order getOrderById(long orderId) {
-		//Todo Fisher
-		return null;
+		
+		return DataSource.allOrders.stream().filter((o)->o.getOrderId()==orderId).findAny().orElse(null);
 	}
 	
 	@Override
@@ -37,7 +38,10 @@ public class BL implements IBL {
 	@Override
 	public List<Product> getProducts(ProductCategory cat, double price) {
 		//Todo Fisher
-		return null;
+		return DataSource.allProducts.stream()
+				.filter((p)->p.getCategory()== cat && p.getPrice()<= price)
+				.sorted((p1,p2)-> (int) (p1.getProductId() - p2.getProductId()))
+				.collect(Collectors.toList());
 	}
 	
 	@Override
@@ -49,7 +53,10 @@ public class BL implements IBL {
 	@Override
 	public List<Order> getCustomerOrders(long customerId) {
 		//Todo Fisher
-		return null;
+		return DataSource.allOrders.stream()
+				.filter((o)->o.getCustomrId()==customerId)
+				.sorted((o1,o2)-> (int) (o1.getOrderId() - o2.getOrderId()))
+				.collect(Collectors.toList()) ;
 	}
 	
 	@Override
@@ -61,7 +68,15 @@ public class BL implements IBL {
 	@Override
 	public List<Product> getPopularOrderedProduct(int orderedtimes) {
 		//Todo Fisher
-		return null;
+		return DataSource.allProducts.stream()
+				.filter((p)->
+				DataSource.allOrderProducts.stream()
+				.filter((op)->op.getProductId()==p.getProductId())
+						.count() >= orderedtimes)
+				.sorted((p1,p2)-> (int) (p1.getProductId()-p2.getProductId()))
+				.collect(toList());
+				
+				
 	}
 	
 	@Override
@@ -74,7 +89,20 @@ public class BL implements IBL {
 	@Override
 	public List<Customer> getCustomersWhoOrderedProduct(long productId) {
 		//Todo Fisher
-		return null;
+		return DataSource.allCustomers.stream()
+				.filter((c)->
+						DataSource.allOrders.stream()
+								.filter((o)->o.getCustomrId() == c.getId())//find all the costumer orders and
+								.anyMatch((o) -> DataSource.allOrderProducts.stream()
+										  .anyMatch((op)->op.getProductId()== productId && o.getOrderId()== op.getOrderId())// check if any of them contain the productId
+										))
+				.collect(toList());
+						
+						
+						
+//				DataSource.allOrderProducts.stream()
+//						.anyMatch((o)->o.() == c.getId() && o.getOrderId() == productId))
+//				.collect(toList());
 	}
 	
 	@Override

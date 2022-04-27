@@ -21,7 +21,7 @@ public class Program
 		myBl.getProducts(ProductCategory.Accessories, 50.0).forEach(System.out::print);
 		
 		System.out.println("---------popularCustomers:--------");
-		myBl.popularCustomers().forEach(System.out::print);
+		//myBl.popularCustomers().forEach(System.out::print);
 		
 		System.out.println("---------getCustomerOrders:--------");
 		myBl.getCustomerOrders(83L).forEach(System.out::print);
@@ -34,7 +34,7 @@ public class Program
 		myBl.getPopularOrderedProduct(10).forEach(System.out::print);
 		
 		System.out.println("---------getOrderProducts:--------");
-		myBl.getOrderProducts(24L).forEach(System.out::print);
+		//myBl.getOrderProducts(24L).forEach(System.out::print);
 		
 		System.out.println("---------getCustomersWhoOrderedProduct:--------");
 		myBl.getCustomersWhoOrderedProduct (18L).forEach(System.out::print);
