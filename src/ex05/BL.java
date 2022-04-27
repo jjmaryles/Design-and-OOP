@@ -97,9 +97,7 @@ public class BL implements IBL {
 										  .anyMatch((op)->op.getProductId()== productId && o.getOrderId()== op.getOrderId())// check if any of them contain the productId
 										))
 				.collect(toList());
-						
-						
-						
+		
 //				DataSource.allOrderProducts.stream()
 //						.anyMatch((o)->o.() == c.getId() && o.getOrderId() == productId))
 //				.collect(toList());
@@ -114,7 +112,14 @@ public class BL implements IBL {
 	@Override
 	public double sumOfOrder(long orderID) {
 		//Todo Fisher
-		return 0;
+		return DataSource.allOrderProducts.stream()
+				.filter((op)-> op.getOrderId() == orderID)// find the order
+				.mapToDouble((op)-> op.getQuantity() * // map it to double to calc the total price by quantity * price per one
+						DataSource.allProducts.stream() // getting the price for one
+					 .filter((p)->p.getProductId()==op.getProductId()) // find the product
+					 .mapToDouble((p)-> p.getPrice()).sum()) // map it to double is just getting the price per one
+				.sum();
+				
 	}
 	
 	@Override
