@@ -131,7 +131,12 @@ public class BL implements IBL {
 	@Override
 	public List<Customer> ThreeTierCustomerWithMaxOrders() {
 		//Todo Fisher
-		return null;
+		return DataSource.allCustomers.stream()
+				.filter((c)->c.getTier()==3)
+				.sorted((c1,c2)-> (int) (c1.getId()-c2.getId()))
+				.sorted((c1,c2)-> (int) (getCustomerOrders(c2.getId()).stream().count() -  getCustomerOrders(c1.getId()).stream().count()))
+				.limit(3)
+				.collect(toList());
 		
 	}
 	
