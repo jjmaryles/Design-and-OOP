@@ -14,7 +14,7 @@ public class Product
 	public Product(String productInfo)
 	{
 		
-		var product = productInfo.split(" ");
+		String[] product = productInfo.split(" ");
 		
 		ProductId = Long.parseLong(product[1]);
 		name = product[2];

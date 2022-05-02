@@ -11,7 +11,7 @@ public class OrderProduct {
 	
 	public OrderProduct(String orderInfo)
 	{
-		var order = orderInfo.split(" ");
+		String[] order = orderInfo.split(" ");
 		
 		orderId = Long.parseLong(order[2]);
 		productId = Long.parseLong(order[5]);

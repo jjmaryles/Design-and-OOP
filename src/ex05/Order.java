@@ -17,8 +17,8 @@ public class Order {
 	private long customrId;
 	
 	public Order(String orderInfo)  {
-		var order = orderInfo.split(" ");
-		var formatter  = new SimpleDateFormat("dd/MM/yyyy");
+		String[] order = orderInfo.split(" ");
+		SimpleDateFormat formatter  = new SimpleDateFormat("dd/MM/yyyy");
 		
 		orderId = Long.parseLong(order[1]);
 		try

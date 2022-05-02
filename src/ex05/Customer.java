@@ -12,7 +12,7 @@ public class Customer {
 	
 	public Customer(String customerInfo)
 	{
-		var customer = customerInfo.split(" ");
+		String[] customer = customerInfo.split(" ");
 		
 		id = Integer.parseInt(customer[1]);
 		name = customer[3];
