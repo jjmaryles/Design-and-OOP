@@ -16,4 +16,11 @@ public class DirectoryDetails extends FileDetails {
     public void addFile(FileDetails fileDetails){
         file_list.add(fileDetails);
     }
+
+    public  void accept(Visitor visit){
+        for (FileDetails f :file_list) {
+            f.accept(visit);
+        }
+        visit.visit(this);
+    };
 }

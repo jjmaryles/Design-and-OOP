@@ -23,4 +23,8 @@ public class DocxFileDetails extends FileDetails {
     public int getSize() {
         return size;
     }
+
+    public  void accept(Visitor visit){
+        visit.visit(this);
+    }
 }

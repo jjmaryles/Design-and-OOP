@@ -1,6 +1,8 @@
 package ex7;
 
 public interface Visitor {
+
+     void visit(DirectoryDetails file);
      void visit(JpgFileDetails file);
      void visit(HtmlFileDetails file);
      void visit(Mp3FileDetails file );
