@@ -48,7 +48,7 @@ public class Main {
             switch (myString){
                 case "c":
                     //TODO: Add counting behavior
-                    root.accept((Visitor) new fileCountVisitor());
+                    root.accept( new fileCountVisitor());
 
 
 
