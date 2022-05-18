@@ -9,8 +9,8 @@ public class PptxFileDetails extends FileDetails {
         this.size=size;
     }
 
-    public void Accept(Visitor vis){
-
+    public void accept(Visitor vis){
+        vis.visit(this);
     }
 
     public int getSlides() {

@@ -15,5 +15,10 @@ public class TxtFileDetails extends FileDetails {
     public int getSize() {
         return size;
     }
+
+    @Override
+    public void accept(Visitor visit) {
+        visit.visit(this);
+    }
 }
 

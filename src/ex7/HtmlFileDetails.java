@@ -26,6 +26,6 @@ public class HtmlFileDetails extends FileDetails {
     }
 
     public  void accept(Visitor visit){
-
+        visit.visit(this);
     }
 }
