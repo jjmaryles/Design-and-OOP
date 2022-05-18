@@ -48,6 +48,10 @@ public class Main {
             switch (myString){
                 case "c":
                     //TODO: Add counting behavior
+                    root.accept((Visitor) new fileCountVisitor());
+
+
+
                     break;
                 case "sz":
                     //TODO: Add size calculation behavior
