@@ -1,9 +1,10 @@
 package ex7;
 
 public class shortPrintVisitor implements Visitor{
+
     @Override
     public void visit(DirectoryDetails file) {
-
+        //file.
     }
 
     @Override
