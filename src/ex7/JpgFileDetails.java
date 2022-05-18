@@ -11,6 +11,10 @@ public class JpgFileDetails extends FileDetails {
         this.size=size;
     }
 
+    public void Accept(Visitor vis){
+
+    }
+
     public int getWidth() {
         return width;
     }

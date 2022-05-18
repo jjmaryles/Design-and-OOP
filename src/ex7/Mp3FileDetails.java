@@ -9,6 +9,10 @@ public class Mp3FileDetails extends FileDetails {
         this.size=size;
     }
 
+    public void Accept(Visitor vis){
+
+    }
+
     public int getLengthSec() {
         return lengthSec;
     }
