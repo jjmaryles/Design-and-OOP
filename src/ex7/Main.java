@@ -47,20 +47,22 @@ public class Main {
         while (!(myString = scanner.nextLine()).equals("q")){
             switch (myString){
                 case "c":
-                    //TODO: Add counting behavior
-                    root.accept( new fileCountVisitor());
-
-
-
+                    fileCountVisitor fc = new fileCountVisitor();
+                    root.accept(fc);
+                    System.out.println("Found " + fc.getFiles() + " files");
                     break;
                 case "sz":
-                    //TODO: Add size calculation behavior
+                    SizeCalculatorVisitor sc = new SizeCalculatorVisitor();
+                    root.accept(sc);
+                    System.out.println("file size is " + sc.getSize() + " bytes");
                     break;
                 case "st":
-                    //TODO: Add statistics behavior
+                    StatisticsVisitor s = new StatisticsVisitor();
+                    root.accept(s);
                     break;
                 case "sh":
-                    //TODO: Add short representation behavior
+                    shortPrintVisitor sp = new shortPrintVisitor();
+                    root.accept(sp);
             }
         }
     }

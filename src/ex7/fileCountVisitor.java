@@ -5,6 +5,10 @@ public class fileCountVisitor implements Visitor{
 
     int files = 0;
 
+    public int getFiles() {
+        return files;
+    }
+
     @Override
     public void visit(DirectoryDetails file) {
 

@@ -7,6 +7,7 @@ import java.util.List;
 // TODO: Implement Composite (change this file).
 public class DirectoryDetails extends FileDetails {
     List<FileDetails> file_list = new ArrayList<>();
+    public int getSize() {return file_list.size();}
     public void Accept(Visitor vis){
 
     }
