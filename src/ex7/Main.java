@@ -37,7 +37,7 @@ public class Main {
     }
 
     public static void fileMenu(Scanner scanner) throws IOException {
-        String path = "files.txt";
+        String path = "C:\\Design-and-OOP\\src\\ex7\\files.txt";
         FileDetails root = readFileDetails(path);
         System.out.println("Choose from the following options:\n" +
                 "q: quit\n" +
@@ -56,7 +56,7 @@ public class Main {
                 case "sz":
                     SizeCalculatorVisitor sc = new SizeCalculatorVisitor();
                     root.accept(sc);
-                    System.out.println("file size is " + sc.getSize() + " bytes");
+                    System.out.println("the total size is " + sc.getSize() + " bytes");
                     break;
                 case "st":
                     StatisticsVisitor s = new StatisticsVisitor();

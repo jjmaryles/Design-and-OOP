@@ -9,6 +9,10 @@ public class fileCountVisitor implements Visitor{
         return files;
     }
 
+    public int totalFiles(){
+        return files;
+    }
+
     @Override
     public void visit(DirectoryDetails file) {
 

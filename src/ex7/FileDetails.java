@@ -26,7 +26,5 @@ public abstract class FileDetails {
     public abstract void  accept(Visitor visit);
 
 
-    public int getSize() {
 
-    }
 }
