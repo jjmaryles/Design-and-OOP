@@ -1,4 +1,4 @@
-package ex09;
+package ex09.Nimbus1;
 
 import WS1.Observables.WeatherMonitoringSystem;
 import WS1.Observers.Log;

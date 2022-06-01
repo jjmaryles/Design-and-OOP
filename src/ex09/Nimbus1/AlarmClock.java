@@ -1,4 +1,4 @@
-package ex09;
+package ex09.Nimbus1;
 
 import WS1.Observables.AlarmClockRecord;
 import WS1.Observables.AlarmListener;
