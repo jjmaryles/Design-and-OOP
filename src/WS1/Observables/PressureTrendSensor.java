@@ -1,6 +1,6 @@
 package WS1.Observables;
 
-import WS1.Nimbus1.Trend;
+//import WS1.Nimbus1.Trend;
 import WS1.Observers.Observer;
 
 public class PressureTrendSensor extends  Observable  implements Observer {

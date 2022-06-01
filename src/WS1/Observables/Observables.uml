@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>WS1.Observables</OriginalElement>
+  <nodes>
+    <node x="204.0" y="240.0">WS1.Observables.Sensor</node>
+    <node x="296.0" y="497.0">WS1.Observables.AlarmClock</node>
+    <node x="0.0" y="497.0">WS1.Observables.AlarmClockRecord</node>
+    <node x="669.0" y="601.0">WS1.Observables.SensorAlarmListener</node>
+    <node x="0.0" y="196.0">WS1.Observables.PressureTrendSensor</node>
+    <node x="395.0" y="0.0">WS1.Observables.WeatherMonitoringSystem</node>
+    <node x="702.0" y="497.0">WS1.Observables.AlarmListener</node>
+    <node x="75.0" y="0.0">WS1.Observables.Observable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="WS1.Observables.PressureTrendSensor" target="WS1.Observables.Observable" relationship="GENERALIZATION">
+      <point x="0.0" y="-128.0" />
+      <point x="92.0" y="171.0" />
+      <point x="184.5" y="171.0" />
+      <point x="0.0" y="73.0" />
+    </edge>
+    <edge source="WS1.Observables.Sensor" target="WS1.Observables.Observable" relationship="GENERALIZATION">
+      <point x="0.0" y="-84.0" />
+      <point x="277.0" y="171.0" />
+      <point x="184.5" y="171.0" />
+      <point x="0.0" y="73.0" />
+    </edge>
+    <edge source="WS1.Observables.SensorAlarmListener" target="WS1.Observables.AlarmListener" relationship="REALIZATION">
+      <point x="0.0" y="-51.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.46604527296937415" showDependencies="false" x="436.5" y="365.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

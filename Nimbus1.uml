@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>WS1.Nimbus1</OriginalElement>
+  <nodes>
+    <node x="0.0" y="295.0">WS1.Nimbus1.Trend</node>
+    <node x="205.0" y="295.0">WS1.Nimbus1.Nimbus1Clock</node>
+    <node x="173.5" y="0.0">WS1.Nimbus1.RandomSupplier</node>
+    <node x="257.0" y="150.0">WS1.Nimbus1.Nimbus1TemperatureSensor</node>
+    <node x="0.0" y="150.0">WS1.Nimbus1.Nimbus1PressureSensor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="WS1.Nimbus1.Nimbus1PressureSensor" target="WS1.Nimbus1.RandomSupplier" relationship="DEPENDENCY">
+      <point x="0.0" y="-50.0" />
+      <point x="118.5" y="125.0" />
+      <point x="253.0" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="WS1.Nimbus1.Nimbus1TemperatureSensor" target="WS1.Nimbus1.RandomSupplier" relationship="DEPENDENCY">
+      <point x="0.0" y="-50.0" />
+      <point x="387.5" y="125.0" />
+      <point x="253.0" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8454106280193237" showDependencies="true" x="259.0" y="197.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
