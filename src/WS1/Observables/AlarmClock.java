@@ -12,6 +12,9 @@ public class AlarmClock
     private ArrayList<AlarmClockRecord> itsAlarmClockRecords = new ArrayList();
 
     protected AlarmClock() {}
+
+    int counterTicks = 0 ;
+
     public static AlarmClock theInstance()
     {
         if(null==instance)
@@ -19,12 +22,22 @@ public class AlarmClock
         return instance;
     }
 
-    protected void tic(){
+    protected void tic()  {
+        for(AlarmClockRecord record: itsAlarmClockRecords){
+            if(record.remainingTime() - CLOCK_INTERVAL_MILLIS <= 0){
+                record.getListener().wakeup();
+                record.setRemainingTime(record.getInterval());
+            }
+            else
+                record.decrementRemainingTime(CLOCK_INTERVAL_MILLIS);    }
+
         //TODO: fix
     }
 
     public void register(int interval, AlarmListener pal) {
         //TODO: fix
+
+        itsAlarmClockRecords.add(new AlarmClockRecord(interval, pal));
     }
 }
 

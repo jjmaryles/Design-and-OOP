@@ -6,7 +6,7 @@ package sortingClean;
 public class MainApp {
     public static void main(String[] args) {
         // TODO: Change this line to initialize an injected AlgorithmRunner
-        AlgorithmRunner algorithmRunner = new AlgorithmRunner();
+        algorithmRunner algorithmRunner = new algorithmRunner();
 
         algorithmRunner.runAlgorithms();
     }
