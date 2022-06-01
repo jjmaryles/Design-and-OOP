@@ -1,4 +1,4 @@
-package ex09.Observables;
+package WS1.Observables;
 
 public class PressureTrendSensor {
 }

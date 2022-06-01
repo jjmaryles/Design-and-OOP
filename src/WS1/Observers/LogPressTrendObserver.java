@@ -1,4 +1,4 @@
-package ex09.Observers;
+package WS1.Observers;
 
 public class LogPressTrendObserver {
 }
