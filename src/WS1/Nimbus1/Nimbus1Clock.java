@@ -1,5 +1,8 @@
 package WS1.Nimbus1;
 
+
+import WS1.Observables.AlarmClock;
+
 public class Nimbus1Clock extends AlarmClock
 {
     protected Nimbus1Clock()
