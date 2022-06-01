@@ -1,4 +1,4 @@
-package ex09.Nimbus1;
+package ex09;
 
 public class Nimbus1PressureSensor {
 }
